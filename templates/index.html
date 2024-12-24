@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Encryptor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Caesar Cipher Encryptor</h1>
+        <div class="input-section">
+            <label for="text-input">Enter Text to Encrypt:</label>
+            <textarea id="text-input" rows="5" placeholder="Enter your text here..."></textarea>
+        </div>
+        <div class="shift-section">
+            <label for="shift-input">Shift Value:</label>
+            <input type="number" id="shift-input" placeholder="Enter shift value (e.g., 3)">
+        </div>
+        <button id="encrypt-button">Encrypt</button>
+        <div class="output-section">
+            <h2>Encrypted Text:</h2>
+            <textarea id="output-text" rows="5" readonly onclick="this.select(); this.setSelectionRange(0, 99999);"></textarea>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
